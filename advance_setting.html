@@ -1,0 +1,117 @@
+<ion-view hide-nav-bar="false" >
+ 
+  <ion-content class="container">
+     <div class="outerdiv">
+        <div class="tabs_butt tab_butt_mar">
+			<span class="bubble tab_list" ng-class="{'bubble_active':profile_setting === true}" ng-click="show_action('profile_setting');">
+				{{"PROFILE_SETTINGS" | translate}}
+			</span>
+			<span class="bubble tab_list" ng-class="{'bubble_active':profile_desc === true}" ng-click="show_action('profile_desc');">
+				{{"DESCRIPTION" | translate}}
+			</span>
+			<span class="bubble tab_list" ng-class="{'bubble_active':opening_hour === true}" ng-click="show_action('opening_hour');">
+				{{"OPENING_HOURS" | translate}} 
+			</span>
+		</div>
+		<div class="pull-right" ng-show="opening_hour">
+		    <table>
+				 <tbody><tr>
+					<td ng-click="show_action('advance_setting_profile')" class="col_re ti ng-binding">{{"ADVACE_SETTING" | translate}}</td>
+					<td ng-click="show_action('advance_setting_profile')" class="col_conf_re"><i style="font-size:20px; cursor:pointer" class="icon ion-gear-a"></i></td>
+				 </tr>
+			 </tbody></table>
+		</div>
+		<!-- Profile Setting -->
+        <div class="myaccount_list" ng-show="profile_setting">
+			<div class="lists">
+			   <div class="list_content"> 
+				  <table style="width:100%">
+				    <tr>
+						<td class="content_div">
+						   <div><span>{{"COMPANY_NAME" | translate}} </span>:<span> TEST COMPANY</span></div>
+						   <div><span>{{"STREET" | translate}} </span>:<span> TEST STREET</span></div>
+						   <div><span>{{"ZIPCODE" | translate}} </span>:<span>TEST 12345678</span></div>
+						   <div><span>{{"STATE" | translate}} </span>:<span>TEST STATE</span></div>
+						</td>
+					</tr>
+				  </table>
+			   </div>
+			   <div class="edit_action action_area overflow">
+			       <span class="lable tab_list">
+						{{"COMPANY_NAME" | translate}} 
+					</span>
+					<input type="text" class="input_res1">
+					<span class="lable tab_list">
+						{{"STREET" | translate}} 
+					</span>
+					<input type="text" class="input_res1">
+					<span class="lable tab_list">
+						{{"ZIPCODE" | translate}} 
+					</span>
+					<input type="text" class="input_res1">
+					<span class="lable tab_list">
+						{{"STATE" | translate}} 
+					</span>
+					<input type="text" class="input_res1">
+					<div class="container margin clear">
+					<input type="button" value="{{'SAVE' | translate}}" class="save_btn">
+					</div>
+			   </div>
+			   
+
+			 </div>
+        </div>
+        <!-- Profile Description -->
+        <div class="myaccount_list" ng-show="profile_desc">
+        <div class="lists">
+			   <div class="edit_action action_area overflow">
+					<textarea class="" rows="5" placeholder="{{'SHORT_DESC' | translate}}" style="width:100%"></textarea>
+					<div class="container margin clear">
+					<input type="button" value="{{'SAVE' | translate}}" class="save_btn">
+					</div>
+			   </div>
+			   
+
+			 </div>
+			 <div class="lists margin">
+			   <div class="edit_action action_area overflow">
+					
+					<textarea class="" rows="10" placeholder="{{'LONG_DESC' | translate}}" style="width:100%"></textarea>
+					<div class="container margin clear">
+					<input type="button" value="{{'SAVE' | translate}}" class="save_btn">
+					</div>
+			   </div>
+			   
+
+			 </div>
+			
+        </div>
+        <!--opening hours -->
+        <div class="myaccount_list mar_top" ng-show="opening_hour">
+			<div class="container">
+			<table width="100%"style="border-spacing: 4px;border-collapse: separate;">
+				<tr>
+				<td class="border" width="30%">{{'DAY' | translate}}</td>
+				<td class="border" width="35%">{{'OPEN' | translate}}</td>
+				<td class="border" width="35%">{{'CLOSED' | translate}}</td>
+				</tr>
+				<tr>
+				<td class="col_ac" width="30%">{{'MONDAY' | translate}}</td>
+				<td class="border" width="35%"><input type="text" class="td_text"></td>
+				<td class="border" width="35%"><input type="text" class="td_text"></td>
+				</tr>
+				<tr>
+				<td class="col_ac" width="30%">{{'TUESDAY' | translate}}</td>
+				<td class="border" width="35%">{{'OPEN' | translate}}</td>
+				<td class="border" width="35%">{{'CLOSED' | translate}}</td>
+				</tr>
+			</table>
+			</div>
+        </div>
+     </div>
+  </ion-content>
+  <!--<div class="bar bar-footer">
+   <div class="responsive-image landing_footer">
+   </div>
+  </div> -->
+</ion-view>
